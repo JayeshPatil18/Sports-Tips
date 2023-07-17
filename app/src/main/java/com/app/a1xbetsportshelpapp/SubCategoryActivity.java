@@ -29,6 +29,9 @@ public class SubCategoryActivity extends AppCompatActivity {
         subCategory4 = findViewById(R.id.sc4);
         subCategory5 = findViewById(R.id.sc5);
 
+        Bundle extras = getIntent().getExtras();
+        String category = extras.getString("category");
+
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +44,8 @@ public class SubCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SubCategoryActivity.this, DetailsActivity.class);
-                intent.putExtra("category", "sub_category1");
+                intent.putExtra("sub_category", "score");
+                intent.putExtra("category", category);
                 startActivity(intent);
             }
         });
@@ -50,7 +54,8 @@ public class SubCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SubCategoryActivity.this, DetailsActivity.class);
-                intent.putExtra("category", "sub_category2");
+                intent.putExtra("sub_category", "live football");
+                intent.putExtra("category", category);
                 startActivity(intent);
             }
         });
@@ -59,7 +64,8 @@ public class SubCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SubCategoryActivity.this, DetailsActivity.class);
-                intent.putExtra("category", "sub_category3");
+                intent.putExtra("sub_category", "live cricket");
+                intent.putExtra("category", category);
                 startActivity(intent);
             }
         });
@@ -68,7 +74,8 @@ public class SubCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SubCategoryActivity.this, DetailsActivity.class);
-                intent.putExtra("category", "sub_category4");
+                intent.putExtra("sub_category", "watch live match");
+                intent.putExtra("category", category);
                 startActivity(intent);
             }
         });
@@ -77,7 +84,8 @@ public class SubCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SubCategoryActivity.this, DetailsActivity.class);
-                intent.putExtra("category", "sub_category5");
+                intent.putExtra("sub_category", "earn from games");
+                intent.putExtra("category", category);
                 startActivity(intent);
             }
         });

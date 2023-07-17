@@ -10,12 +10,12 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class CustomListAdapter extends ArrayAdapter<ListItemModel> {
+public class CustomListAdapter extends ArrayAdapter<String> {
 
     private Context context;
-    private List<ListItemModel> itemList;
+    private List<String> itemList;
 
-    public CustomListAdapter(Context context, List<ListItemModel> itemList) {
+    public CustomListAdapter(Context context, List<String> itemList) {
         super(context, 0, itemList);
         this.context = context;
         this.itemList = itemList;
@@ -30,13 +30,13 @@ public class CustomListAdapter extends ArrayAdapter<ListItemModel> {
         }
 
         // Get the current item from the list
-        ListItemModel currentItem = itemList.get(position);
+        String currentItem = itemList.get(position);
 
         // Find the ImageView and TextView in the layout
         TextView textView = listItemView.findViewById(R.id.textView);
 
         // Set the image and text for the current item
-        textView.setText(currentItem.getText());
+        textView.setText(currentItem);
 
         return listItemView;
     }

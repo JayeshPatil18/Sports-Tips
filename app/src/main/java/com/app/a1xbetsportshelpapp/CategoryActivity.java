@@ -46,7 +46,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
-                intent.putExtra("category", "category1");
+                intent.putExtra("category", "cricket");
                 startActivity(intent);
             }
         });
@@ -55,7 +55,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
-                intent.putExtra("category", "category2");
+                intent.putExtra("category", "football");
                 startActivity(intent);
             }
         });
@@ -64,7 +64,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
-                intent.putExtra("category", "category3");
+                intent.putExtra("category", "hockey");
                 startActivity(intent);
             }
         });
@@ -73,7 +73,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
-                intent.putExtra("category", "category4");
+                intent.putExtra("category", "rugby football");
                 startActivity(intent);
             }
         });
@@ -82,7 +82,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
-                intent.putExtra("category", "category5");
+                intent.putExtra("category", "basketball");
                 startActivity(intent);
             }
         });

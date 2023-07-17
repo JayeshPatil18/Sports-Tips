@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "746044605756",
+    "project_id": "sports-tips-e1b86",
+    "storage_bucket": "sports-tips-e1b86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746044605756:android:4ad761271c1ece0467ca39",
+        "android_client_info": {
+          "package_name": "com.app.a1xbetsportshelpapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746044605756-2efa15us5vi9930em991pnjk97g87s3e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.a1xbetsportshelpapp",
+            "certificate_hash": "5e9c31e5e009a9786c9a8670ed008e659314f254"
+          }
+        },
+        {
+          "client_id": "746044605756-6gtj10jtppq7f35vjppsm9sj5fecisb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaJy80RtGWfKA6m0xUXb4fwgJIhlLDzA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746044605756-6gtj10jtppq7f35vjppsm9sj5fecisb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
