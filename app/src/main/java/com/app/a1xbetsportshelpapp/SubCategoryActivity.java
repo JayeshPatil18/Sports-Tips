@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 
 public class SubCategoryActivity extends AppCompatActivity {
 
+    CustomAd customAd = new CustomAd(SubCategoryActivity.this);
+
     ImageView backButton;
     LinearLayout subCategory1;
     LinearLayout subCategory2;
@@ -36,6 +38,7 @@ public class SubCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+                customAd.showAd();
             }
         });
 
@@ -47,6 +50,7 @@ public class SubCategoryActivity extends AppCompatActivity {
                 intent.putExtra("sub_category", "score");
                 intent.putExtra("category", category);
                 startActivity(intent);
+                customAd.showAd();
             }
         });
 
@@ -57,6 +61,7 @@ public class SubCategoryActivity extends AppCompatActivity {
                 intent.putExtra("sub_category", "live football");
                 intent.putExtra("category", category);
                 startActivity(intent);
+                customAd.showAd();
             }
         });
 
@@ -67,6 +72,7 @@ public class SubCategoryActivity extends AppCompatActivity {
                 intent.putExtra("sub_category", "live cricket");
                 intent.putExtra("category", category);
                 startActivity(intent);
+                customAd.showAd();
             }
         });
 
@@ -77,6 +83,7 @@ public class SubCategoryActivity extends AppCompatActivity {
                 intent.putExtra("sub_category", "watch live match");
                 intent.putExtra("category", category);
                 startActivity(intent);
+                customAd.showAd();
             }
         });
 
@@ -87,7 +94,14 @@ public class SubCategoryActivity extends AppCompatActivity {
                 intent.putExtra("sub_category", "earn from games");
                 intent.putExtra("category", category);
                 startActivity(intent);
+                customAd.showAd();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        customAd.showAd();
+        super.onBackPressed();
     }
 }

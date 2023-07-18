@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class StartActivity extends AppCompatActivity {
+    CustomAd customAd = new CustomAd(StartActivity.this);
     Button startBtn;
 
     @Override
@@ -22,7 +23,14 @@ public class StartActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, CategoryActivity.class);
                 startActivity(intent);
+                customAd.showAd();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        customAd.showAd();
+        super.onBackPressed();
     }
 }

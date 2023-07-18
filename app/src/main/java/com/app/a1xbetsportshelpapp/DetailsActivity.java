@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -20,8 +22,12 @@ import java.util.List;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    CustomAd customAd = new CustomAd(DetailsActivity.this);
+
     ListView listView;
     CustomListAdapter adapter;
+
+    ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,7 @@ public class DetailsActivity extends AppCompatActivity {
         String subCategory = extras.getString("sub_category");
 
         listView = findViewById(R.id.listview);
+        backButton = findViewById(R.id.backButton);
 
         List<String> itemList = new ArrayList<>();
 
@@ -62,5 +69,19 @@ public class DetailsActivity extends AppCompatActivity {
                 Log.d(TAG, "Error: " + databaseError.getMessage());
             }
         });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                customAd.showAd();
+            }
+        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        customAd.showAd();
+        super.onBackPressed();
     }
 }

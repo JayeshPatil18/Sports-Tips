@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CategoryActivity extends AppCompatActivity {
+
+    CustomAd customAd = new CustomAd(CategoryActivity.this);
     ImageView backButton;
     LinearLayout category1;
     LinearLayout category2;
@@ -38,6 +40,7 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+                customAd.showAd();
             }
         });
 
@@ -48,6 +51,7 @@ public class CategoryActivity extends AppCompatActivity {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
                 intent.putExtra("category", "cricket");
                 startActivity(intent);
+                customAd.showAd();
             }
         });
 
@@ -57,6 +61,7 @@ public class CategoryActivity extends AppCompatActivity {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
                 intent.putExtra("category", "football");
                 startActivity(intent);
+                customAd.showAd();
             }
         });
 
@@ -66,6 +71,7 @@ public class CategoryActivity extends AppCompatActivity {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
                 intent.putExtra("category", "hockey");
                 startActivity(intent);
+                customAd.showAd();
             }
         });
 
@@ -75,6 +81,7 @@ public class CategoryActivity extends AppCompatActivity {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
                 intent.putExtra("category", "rugby football");
                 startActivity(intent);
+                customAd.showAd();
             }
         });
 
@@ -84,7 +91,14 @@ public class CategoryActivity extends AppCompatActivity {
                 Intent intent = new Intent(CategoryActivity.this, SubCategoryActivity.class);
                 intent.putExtra("category", "basketball");
                 startActivity(intent);
+                customAd.showAd();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        customAd.showAd();
+        super.onBackPressed();
     }
 }
