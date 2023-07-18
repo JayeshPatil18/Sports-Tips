@@ -7,4 +7,11 @@
     <string name="bannerCategory">ca-app-pub-3940256099942544/6300978111</string>
     <string name="bannerSubCategory">ca-app-pub-3940256099942544/6300978111</string>
     <string name="bannerDetails">ca-app-pub-3940256099942544/6300978111</string>
+
+<!--    Interstitial Ads-->
+    <string name="interstitialContinue">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="interstitialStart">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="interstitialCategory">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="interstitialSubCategory">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="interstitialDetails">ca-app-pub-3940256099942544/1033173712</string>
 </resources>
