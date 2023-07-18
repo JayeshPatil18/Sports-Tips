@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">1xBet Sports Help App</string>
+
+<!--    Banner Ads-->
+    <string name="bannerContinue">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="bannerStart">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="bannerCategory">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="bannerSubCategory">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="bannerDetails">ca-app-pub-3940256099942544/6300978111</string>
 </resources>
