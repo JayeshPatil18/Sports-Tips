@@ -51,6 +51,8 @@ public class DetailsActivity extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        bannerAdsStatus(mAdView);
+
         Bundle extras = getIntent().getExtras();
         String category = extras.getString("category");
         String subCategory = extras.getString("sub_category");
@@ -100,5 +102,30 @@ public class DetailsActivity extends AppCompatActivity {
     public void onBackPressed() {
         customAd.showAd();
         super.onBackPressed();
+    }
+
+    public void bannerAdsStatus(AdView mAdView){
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("ads");
+        databaseReference.child("banner").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // This method is called when data is retrieved successfully
+                String value = dataSnapshot.getValue(String.class);
+
+                if (value.equals("false")) {
+                    // The value of the "banner" key is true, so show the banner ad
+                    mAdView.setVisibility(View.GONE);
+                } else {
+                    // The value of the "banner" key is false or null, so don't show the banner ad
+                    mAdView.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // This method is called when there's an error while retrieving data
+                Log.e("FirebaseData", "Error: " + databaseError.getMessage());
+            }
+        });
     }
 }

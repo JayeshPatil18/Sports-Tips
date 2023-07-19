@@ -1,8 +1,5 @@
 package com.app.a1xbetsportshelpapp;
 
-
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
@@ -14,18 +11,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class CustomAd extends Activity {
-    Context context;
+public class AdsStatus {
 
-    public CustomAd(Context context) {
-        this.context = context;
-    }
-
-    public void showAd(){
-
+    public static void interstitialAd(){
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("ads");
 
-        databaseReference.child("link").addListenerForSingleValueEvent(new ValueEventListener() {
+        databaseReference.child("interstitial").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -33,9 +24,7 @@ public class CustomAd extends Activity {
                 if(value.equals("false")){
                     return;
                 } else{
-                    String url = "https://www.wikipedia.org/";
-                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                    context.startActivity(intent);
+                    return;
                 }
             }
 
